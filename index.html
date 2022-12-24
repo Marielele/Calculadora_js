@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link href="style.css" rel="stylesheet" />
+    <link />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/89f32dc1fd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="math.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <a href="https://github.com/Marielele" id="firma">
+      <i class="fa-brands fa-github"></i>
+    </a>
+    <div id="cal-body">
+      <div id="cal-screen">
+        <input type="text" id="input-screen" />
+      </div>
+      <div class="cal-buttons">
+        <table>
+          <tr>
+            <td>
+              <button id="btn-mc">mc</button>
+            </td>
+            <td>
+              <button id="btn-mplus">m+</button>
+            </td>
+            <td>
+              <button id="btn-mminus">m-</button>
+            </td>
+            <td>
+              <button id="btn-mr">mr</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="btn-c" onclick="eraseAll()">c</button>
+            </td>
+            <td>
+              <button id="btn-divide" onclick="writeInScreen('divide')">
+                <i class="fa-solid fa-divide"></i>
+              </button>
+            </td>
+            <td>
+              <button id="btn-multiply" onclick="writeInScreen('multiply')">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </td>
+            <td>
+              <button id="btn-delete" onclick="writeInScreen('erase')">
+                <i class="fa-solid fa-delete-left"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="btn-7" onclick="writeInScreen(7)">7</button>
+            </td>
+            <td>
+              <button id="btn-8" onclick="writeInScreen(8)">8</button>
+            </td>
+            <td>
+              <button id="btn-9" onclick="writeInScreen(9)">9</button>
+            </td>
+            <td>
+              <button id="btn-minus" onclick="writeInScreen('minus')">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="btn-4" onclick="writeInScreen(4)">4</button>
+            </td>
+            <td>
+              <button id="btn-5" onclick="writeInScreen(5)">5</button>
+            </td>
+            <td>
+              <button id="btn-6" onclick="writeInScreen(6)">6</button>
+            </td>
+            <td>
+              <button id="btn-plus" onclick="writeInScreen('plus')">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="btn-1" onclick="writeInScreen(1)">1</button>
+            </td>
+            <td>
+              <button id="btn-2" onclick="writeInScreen(2)">2</button>
+            </td>
+            <td>
+              <button id="btn-3" onclick="writeInScreen(3)">3</button>
+            </td>
+            <td rowspan="2">
+              <button id="equals-button" onclick="operation()">
+                <i class="fa-solid fa-equals"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <button id="btn-percent" onclick="writeInScreen('percent')">
+                <i class="fa-solid fa-percent"></i>
+              </button>
+            </td>
+            <td>
+              <button id="btn-0" onclick="writeInScreen(0)">0</button>
+            </td>
+            <td>
+              <button id="btn-dot" onclick="writeInScreen('dot')">
+                <i class="fa-solid fa-circle"></i>
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

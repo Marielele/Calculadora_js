@@ -1,0 +1,126 @@
+:root {
+  --purplecolor: #7d6e83;
+  --beigecolor: #d0b8a8;
+  --sandcolor: #dfd3c3;
+  --lightcolor: #f8ede3;
+}
+
+body {
+  background-color: var(--purplecolor);
+  font-family: "IBM Plex Sans Condensed", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+
+#cal-body {
+  width: 25rem;
+  height: 35rem;
+  background-color: var(--beigecolor);
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px #332d35b7;
+}
+
+#cal-screen {
+  height: 20%;
+  display: flex;
+}
+
+#input-screen{
+    width: 100%;
+    background-color: var(--lightcolor);
+    border-radius: 10px;
+    border: none;
+    font-size: 70px;
+    font-family: "IBM Plex Sans Condensed", sans-serif;
+    text-align: end;
+}
+
+input:focus {
+    outline: none;
+    caret-color: transparent;
+}
+
+.cal-buttons {
+    height: 80%;
+    margin-top: 3px;
+    box-sizing: border-box;
+    display: flex;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+td {
+    box-sizing: border-box;
+}
+
+button {
+    border-radius: 10px;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: large;
+    background-color: var(--sandcolor);
+    width: 80%;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--beigecolor);
+}
+
+button:active {
+    background-color: var(--sandcolor);
+}
+
+#equals-button {
+    height: 110px;
+}
+
+#firma {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+a {
+  margin: 0;
+  color: #332d35b7;
+  text-decoration: none;
+  font-size: smaller;
+}
+
+a:visited {
+  margin: 0;
+  color: #332d35b7;
+  text-decoration: none;
+  font-size: smaller;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+
+  #cal-body {
+    background-color: var(--beigecolor);
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #cal-screen {
+    height: 15%;
+  }
+}
