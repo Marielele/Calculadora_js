@@ -71,6 +71,9 @@ function writeInScreen(sign) {
             screen.value = i
             break;
         default:
+            if (screen.value === 'SyntaxError') {
+                eraseAll()
+            }
             screen.value === '0.' || screen.value != 0 ? screen.value += "" + sign : screen.value = sign
             break;
     }
@@ -81,6 +84,11 @@ function eraseAll() {
 }
 
 function operation() {
-    let op = screen.value
-    screen.value = math.evaluate(op)
+    try {
+        let op = screen.value
+        screen.value = math.evaluate(op)
+    }
+    catch (error) {
+        screen.value = 'SyntaxError'
+    }
 }
